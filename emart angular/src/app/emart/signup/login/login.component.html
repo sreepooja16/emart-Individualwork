@@ -1,0 +1,57 @@
+<div class="bg">
+<div class="container mt-5">
+   
+    <div class="row">
+        <div class="col-3"></div>
+        
+        <div class="col-md-5 ">
+            <div class="small text-center text-danger">{{errorMessage}}</div>
+            <div class="card card-align mt-5">
+                <div class="card-header text-center text-white" style="background-color:#0ed1e3" >
+                    <h4>LOGIN</h4>
+                </div>
+                <div class="card-body">
+                   
+                   
+                   <b>Sign in as : </b>
+                    <div class="form-check-inline">
+                        <label for="buyer" class="form-check-label">
+                            <input type="radio" class="form-check-input" id="buyer" [(ngModel)]='sign' value='buyer'
+                                name="radioSign" />
+                           <b>Buyer</b>
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label for="buyer" class="form-check-label">
+                            <input type="radio" class="form-check-input" id="seller"  [(ngModel)]='sign' value='seller'
+                                name="radioSign" />
+                           <b>Seller</b>
+                        </label>
+                    </div>
+                    <div class="form-group mt-3">
+                        <b><label for="username">Username</label></b>
+                        <input type="text" class="form-control" placeholder="UserName" pattern='[A-Za-z\\s]*' id="username"
+                            [(ngModel)]="username" name="username" required/>
+                    </div>
+                    <div class="form-group">
+                        <b><label for="password">Password</label></b>
+                        <input type="password" class="form-control" placeholder="Password" pattern='[A-Za-z\\s]*' id="password"
+                            [(ngModel)]="password" name="password" required/>
+                    </div>
+                    <button type="submit" (click)="validate()"  class="btn btn-outline-primary"><b>LOGIN</b></button>
+                    
+                </div>
+                
+                <div class="card-footer mx-2 my-3">
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account?<a routerLink="/seller-signup">Sign Up as seller</a>
+                    </div>          
+
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    
+</div>
+</div>
